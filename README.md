@@ -12,7 +12,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ## Description
 The Employee Manager is a web-based CRUD (Create, Read, Update, Delete) application built using Angular 18. This application provides an intuitive interface for managing employee records efficiently. 
 
-#### Note : *This app currently local storage of browser to manage the data* 
+#### Note : *This app currently uses local storage of browser to manage the data* 
 
 ### Features
 
