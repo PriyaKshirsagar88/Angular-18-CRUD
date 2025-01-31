@@ -1,4 +1,4 @@
-# Angular18CRUD
+# Angular18CRUD - Employee Manager
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
 
@@ -10,17 +10,25 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 link: https://angular-18-crud-tau.vercel.app/
 
 ## Description
-The Image Search App is a JavaScript-based web application designed to facilitate efficient image browsing and discovery. Utilizing modern web technologies, it provides a seamless and responsive user experience across different devices. The application leverages a JavaScript fetch API to deliver fast and accurate image search results based on user queries.
+The Employee Manager is a web-based CRUD (Create, Read, Update, Delete) application built using Angular 18. This application provides an intuitive interface for managing employee records efficiently. 
+
+## Note : *This app currently local storage of browser to manage the data*
 
 ### Features
 
 1. **User Interface**:
-   - Responsive design using HTML, CSS, and JavaScript for a smooth and adaptable experience on all devices.
-   - Clean and intuitive layout for easy interaction and navigation.
+   - Built with Angular 18 and Bootstrap, ensuring a clean, responsive, and user-friendly experience.
+   - Clean and intuitive layout for easy interaction.
 
-2. **Image Search Functionality**:
-   - Search Bar: Allows users to enter queries and filter images based on their preferences.
-   - Image Display: Efficiently fetches and displays images from a remote source using JavaScript fetch API.
+2. **Employee Management Functionality:**:
+   - Create Employee: Users can add new employee records by entering details such as Name, Email, Contact Number, City, State, Pin Code, and Address.
+   - Read Employee Data: A dynamically updated employee list is displayed in a structured table format. 
+   - Update Employee Details: Users can modify employee details using an Edit button.
+   - Delete Employee: Unnecessary records can be removed instantly using the Delete button.
+
+3. **Form Validation & User Experience:**
+   - Input fields include validation checks for correct data entry.
+   - Interactive buttons for resetting the form and saving employee details.
 
 3. **Responsive Design**:
    - Ensures a seamless user experience across various screen sizes and devices.
@@ -28,7 +36,7 @@ The Image Search App is a JavaScript-based web application designed to facilitat
      
 4. **Deployment**:
    - GitHub Repository: Source code and project documentation available for review and reference.
-   - Live Link: The application is deployed using GitHub Pages, offering easy accessibility and the ability to view and interact with the app in real-time.
+   - Live Link: The application is deployed using Vercel, offering easy accessibility and the ability to view and interact with the app in real-time.
 
 ### Built using 
 Angular 18 and Bootstrap
@@ -37,5 +45,5 @@ Angular 18 and Bootstrap
 
 ### Image Representation
 
-![Image 1](https://github.com/PriyaKsagar2/Image-Search-App/blob/main/image-search-app.png)
+![Image 1](https://github.com/PriyaKshirsagar88/Angular-18-CRUD/blob/bd382963ffad42fd874eec520a519dd51e9ff719/src/assets/angular-18-crud-tau.vercel.app_.png)
 <br> 
