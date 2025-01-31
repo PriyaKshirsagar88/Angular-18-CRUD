@@ -1,7 +1,7 @@
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { EmployeeModel } from './model/Employee';
 
 @Component({
@@ -36,12 +36,12 @@ export class AppComponent {
   createForm() {
     this.employeeForm = new FormGroup({
       empId: new FormControl(this.employeeObj.empId),
-      name: new FormControl(this.employeeObj.name),
+      name: new FormControl(this.employeeObj.name, [Validators.required]),
       city: new FormControl(this.employeeObj.city),
       address: new FormControl(this.employeeObj.address),
       contactNo: new FormControl(this.employeeObj.contactNo),
       emailId: new FormControl(this.employeeObj.emailId),
-      pinCode: new FormControl(this.employeeObj.pinCode),
+      pinCode: new FormControl(this.employeeObj.pinCode, [Validators.required,Validators.minLength(6)]),
       state: new FormControl(this.employeeObj.state),
     });
   }
@@ -58,8 +58,7 @@ export class AppComponent {
         this.employeeList.unshift(this.employeeForm.value);
       }
       localStorage.setItem("EmpData", JSON.stringify(this.employeeList));
-      this.employeeObj = new EmployeeModel();
-      this.createForm()
+      this.onReset();
     }
   }
 
@@ -86,6 +85,12 @@ export class AppComponent {
       const index = this.employeeList.findIndex(m=>m.empId == id);
       this.employeeList.splice(index, 1);
       localStorage.setItem("EmpData", JSON.stringify(this.employeeList));
+      this.onReset();
     }
+  }
+
+  onReset(){
+    this.employeeObj = new EmployeeModel();
+    this.createForm()
   }
 }

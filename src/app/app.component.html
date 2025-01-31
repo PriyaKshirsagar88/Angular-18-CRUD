@@ -13,6 +13,13 @@
             <div class="col-12 pt-2">
               <label for="" class="pb-1 fw-bold" >Name</label>
               <input type="text" formControlName="name" placeholder="Enter your name" formControlName="name" placeholder="Enter your name" class="form-control">
+              <div class="text-danger">
+                @if (employeeForm.controls['name'].touched) {
+                  @if (employeeForm.controls['name'].errors?.['required']) {
+                    <span>Name is reqiured!</span>
+                  }
+                }
+              </div>
             </div>
             <div class="col-6 pt-2">
               <label for="" class="pb-1 fw-bold">Email id</label>
@@ -33,6 +40,16 @@
             <div class="col-6 pt-2">
               <label for="" class="pb-1 fw-bold">Pin Code</label>
               <input type="text" placeholder="Enter your Pin Code" formControlName="pinCode" placeholder="Enter your name" class="form-control">
+              <div class="text-danger">
+                @if (employeeForm.controls['pinCode'].touched) {
+                  @if (employeeForm.controls['pinCode'].errors?.['required']) {
+                    <span>Pin code is reqiured!</span>
+                  }
+                  @if (employeeForm.controls['pinCode'].errors?.['minlength']) {
+                    <span>Minimum 6 numbers are reqiured!</span>
+                  }
+                }
+              </div>
             </div>
             <div class="col-12 pt-2">
               <label for="" class="pb-1 fw-bold">Address</label>
@@ -41,7 +58,7 @@
           </div>
           <div class="row pt-2">
             <div class="col-6 text-center pt-2">
-              <button type="button" class="btn btn-secondary">Reset</button>
+              <button type="button" (click)="onReset()" class="btn btn-secondary">Reset</button>
             </div>
             <div class="col-6 text-center pt-2">
               @if (employeeForm.controls['empId'].value == '1') {
