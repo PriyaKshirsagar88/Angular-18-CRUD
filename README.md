@@ -6,13 +6,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-#### Website live link 
-link: https://angular-18-crud-tau.vercel.app/
+## Website live link 
+#### link: https://angular-18-crud-tau.vercel.app/
 
 ## Description
 The Employee Manager is a web-based CRUD (Create, Read, Update, Delete) application built using Angular 18. This application provides an intuitive interface for managing employee records efficiently. 
 
-## Note : *This app currently local storage of browser to manage the data*
+#### Note : *This app currently local storage of browser to manage the data* 
 
 ### Features
 
