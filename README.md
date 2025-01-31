@@ -6,22 +6,36 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+#### Website live link 
+link: https://angular-18-crud-tau.vercel.app/
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Description
+The Image Search App is a JavaScript-based web application designed to facilitate efficient image browsing and discovery. Utilizing modern web technologies, it provides a seamless and responsive user experience across different devices. The application leverages a JavaScript fetch API to deliver fast and accurate image search results based on user queries.
 
-## Build
+### Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. **User Interface**:
+   - Responsive design using HTML, CSS, and JavaScript for a smooth and adaptable experience on all devices.
+   - Clean and intuitive layout for easy interaction and navigation.
 
-## Running unit tests
+2. **Image Search Functionality**:
+   - Search Bar: Allows users to enter queries and filter images based on their preferences.
+   - Image Display: Efficiently fetches and displays images from a remote source using JavaScript fetch API.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. **Responsive Design**:
+   - Ensures a seamless user experience across various screen sizes and devices.
+   - Adapts layout and functionality to provide optimal performance on both mobile and desktop.
+     
+4. **Deployment**:
+   - GitHub Repository: Source code and project documentation available for review and reference.
+   - Live Link: The application is deployed using GitHub Pages, offering easy accessibility and the ability to view and interact with the app in real-time.
 
-## Running end-to-end tests
+### Built using 
+Angular 18 and Bootstrap
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<br/>
 
-## Further help
+### Image Representation
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+![Image 1](https://github.com/PriyaKsagar2/Image-Search-App/blob/main/image-search-app.png)
+<br> 
