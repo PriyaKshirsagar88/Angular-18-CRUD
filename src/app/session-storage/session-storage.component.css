@@ -1,0 +1,24 @@
+.mainContainer{
+    padding: 20px 0;
+    margin-top: 55px !important;
+}
+
+.form-control {
+    border: 1px solid gray !important;
+}
+
+.title{
+    color: #47b2e4;
+    font-size: 24px;
+    margin: 10px 0 20px 0;
+}
+
+.card-header{
+    font-size: 20px;
+    background-color: #47b2e4;
+}
+
+.save-btn{
+    color: #fff;
+    background-color: #47b2e4;
+}

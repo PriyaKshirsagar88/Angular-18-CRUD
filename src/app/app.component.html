@@ -1,1 +1,18 @@
-<router-outlet></router-outlet>
+<!-- ADDING GLOBAL HEADER HERE -->
+<div class="container header">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl d-flex align-items-center">
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li class="nav-local"><a routerLink="/local" routerLinkActive="active">Local Storage</a></li>
+                    <li><a routerLink="/session" routerLinkActive="active">Session Storage</a></li>
+                    <li class="nav-api"><a routerLink="/api" routerLinkActive="active">API CRUD</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</div>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

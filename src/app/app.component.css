@@ -1,0 +1,113 @@
+
+.header {
+    --background-color: rgb(245,246,248);
+    --background-color: #F5F7F8;
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,0.5);
+    --heading-color: #000;
+    color: var(--default-color);
+    background-color: var(--background-color);
+    /* padding: 15px 0; */
+    transition: all 0.5s;
+    z-index: 997;
+  }
+  
+  .navmenu {
+    padding: 0;
+  }
+  
+  .navmenu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navmenu li {
+    position: relative;
+  }
+  
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-color);
+    padding: 18px 15px;
+    font-size: 17px;
+    font-family: var(--nav-font);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+    color: #000;
+  }
+  
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    transition: 0.3s;
+  }
+  
+  .navmenu li:last-child a {
+    padding-right: 0;
+  }
+  
+  .navmenu .nav-local:hover>a,
+  .navmenu .nav-local .active,
+  .navmenu .nav-local .active:focus {
+    color: var(--nav-hover-color);
+    color: seagreen !important;  
+  }
+
+  .navmenu li:hover>a,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-hover-color);
+    color: #47b2e4 !important;  
+  }
+
+  .navmenu .nav-api:hover>a,
+  .navmenu .nav-api .active,
+  .navmenu .nav-api .active:focus {
+    color: var(--nav-hover-color);
+    color: #FF9D23 !important;  
+  }
+
+  .navmenu li > a {
+    position: relative; /* Needed for the pseudo-element */
+    color: #000; /* Default text color */
+    text-decoration: none; /* Remove default underline */
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+  }
+  
+  /* Create animated underline */
+  .navmenu li > a::after {
+    content: ""; /* Empty element for underline */
+    position: absolute;
+    left: 10px;
+    bottom: 7px;
+    width: 0%; /* Initially hidden */
+    height: 3px; /* Thickness of the underline */
+    background-color: #47b2e4; /* Underline color */
+    transition: width 0.3s ease-in-out; /* Smooth animation */
+  }
+  
+  .nav-api > a::after {
+    background-color: #F9CB43 !important; 
+  }
+
+  .nav-local > a::after {
+    background-color: seagreen !important; 
+  }
+
+  .navmenu li > a{
+    padding-right: 16px !important;
+  }
+
+  .navmenu li:hover > a::after,
+  .navmenu .active::after {
+    width: 80%; /* Expand the underline on hover/active */
+  }

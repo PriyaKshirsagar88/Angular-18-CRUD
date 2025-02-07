@@ -1,1 +1,122 @@
-<p>api-crud works!</p>
+<div class="mainContainer row">
+
+    <!-- EMPLOYEE FORM -->
+    <h6 class="title text-center">EMPLOYEE FORM</h6>
+    <div class="col-12 pt-1">
+      <div class="card">
+        <div class="card-header text-black">
+          New Employee
+        </div>
+        <div class="card-body">
+          <form [formGroup]="employeeForm">
+            <div class="row">
+              <div class="col-12 pt-2">
+                <label for="" class="pb-1 fw-bold" >Name</label>
+                <input type="text" formControlName="name" placeholder="Enter your name" formControlName="name" placeholder="Enter your name" class="form-control">
+                <div class="text-danger">
+                  @if (employeeForm.controls['name'].touched) {
+                    @if (employeeForm.controls['name'].errors?.['required']) {
+                      <span>Name is reqiured!</span>
+                    }
+                  }
+                </div>
+              </div>
+              <div class="col-6 pt-2">
+                <label for="" class="pb-1 fw-bold">Email id</label>
+                <input type="text" placeholder="Enter your email" formControlName="emailId" placeholder="Enter your name" class="form-control">
+              </div>
+              <div class="col-6 pt-2">
+                <label for="" class="pb-1 fw-bold">Contact No</label>
+                <input type="text" placeholder="Enter your Contact No." formControlName="contactNo" placeholder="Enter your name" class="form-control">
+              </div>
+              <div class="col-6 pt-2">
+                <label for="" class="pb-1 fw-bold">City</label>
+                <input type="text" placeholder="Enter your City" formControlName="city" placeholder="Enter your name" class="form-control">
+              </div>
+              <div class="col-6 pt-2">
+                <label for="" class="pb-1 fw-bold">State</label>
+                <input type="text" placeholder="Enter your State" formControlName="state" placeholder="Enter your name" class="form-control">
+              </div>
+              <div class="col-6 pt-2">
+                <label for="" class="pb-1 fw-bold">Pin Code</label>
+                <input type="text" placeholder="Enter your Pin Code" formControlName="pinCode" placeholder="Enter your name" class="form-control">
+                <div class="text-danger">
+                  @if (employeeForm.controls['pinCode'].touched) {
+                    @if (employeeForm.controls['pinCode'].errors?.['required']) {
+                      <span>Pin code is reqiured!</span>
+                    }
+                    @if (employeeForm.controls['pinCode'].errors?.['minlength']) {
+                      <span>Minimum 6 numbers are reqiured!</span>
+                    }
+                  }
+                </div>
+              </div>
+              <div class="col-12 pt-2">
+                <label for="" class="pb-1 fw-bold">Address</label>
+                <textarea type="text" placeholder="Enter your Address" formControlName="address" placeholder="Enter your name" class="form-control"></textarea>
+              </div>
+            </div>
+            <div class="row pt-2">
+              <div class="col-6 text-center pt-2">
+                <button type="button" (click)="onReset()" class="btn btn-secondary">Reset</button>
+              </div>
+              <div class="col-6 text-center pt-2">
+                @if (employeeForm.controls['empId'].value == '1') {
+                  <button type="submit" (click)="onSave()" class="btn save-btn">Save Employee</button>
+                }@else {
+                  <button type="submit" (click)="onUpdate()" class="btn btn-warning">Update Employee</button>
+                }
+              </div>
+            </div> 
+          </form>
+        </div>
+  
+      </div>
+    </div>
+  
+    <!-- EMPLOYEES LIST -->
+    <h6 class="pt-4 title text-center">EMPLOYEES LIST</h6>
+    <div class="col-12 pt-1">
+      <div class="card">
+        <div class="card-header text-black">
+          Employee List
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12">
+              <table class="table table-border">
+                <thead>
+                  <tr>
+                    <th>Sr No.</th>
+                    <th>Name</th>
+                    <th>Contact no.</th>
+                    <th>Email id</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @for (item of employeeList; track $index) {
+                    <tr>
+                      <td>{{$index+1}}</td>
+                  
+                      <td>{{item.name}}</td>
+                    
+                      <td>{{item.contactNo}}</td>
+                    
+                      <td>{{item.emailId}}</td>
+  
+                      <td>
+                        <button (click)="onEdit(item)" class="btn btn-primary">Edit</button>
+                        <button (click)="onDelete(item.empId)" class="btn btn-danger mx-2">Delete</button>
+                      </td>
+  
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
